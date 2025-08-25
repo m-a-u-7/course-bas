@@ -170,6 +170,14 @@
                 position: static;
                 justify-content: center;
                 margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                width: 100%;
+            }
+            
+            .nav-buttons button {
+                width: 100%;
             }
             
             .quality-badge {
@@ -200,18 +208,19 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="font-sans" style="background-color: #F4F0E0;">
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-sm border-b" style="background-color: #F9F7F4; border-color: #E7E0D3;">
+    <nav class="shadow-sm border-b" style="background-color: #F5F5F4; border-color: #E7E0D3;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-bold" style="color: #8B5A2B;">ZeroMA Premium</h1>
+                    <a href="https://zeromapremium.github.io/webapp/class/1" class="text-2xl font-bold" style="color: #8B5A2B;">Zeroma Premium</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#" class="font-medium hover:opacity-75 transition-opacity" style="color: #8B5A2B;">Classes</a>
-                    <a href="#" class="font-medium hover:opacity-75 transition-opacity" style="color: #8B5A2B;">Assignments</a>
-                    <a href="#" class="font-medium hover:opacity-75 transition-opacity" style="color: #8B5A2B;">Profile</a>
+                    <a href="https://zeromapremium.github.io/webapp" class="font-medium hover:opacity-75 transition-opacity" style="color: #8B5A2B;">Home</a>
+                    <a href="https://zeromapremium.github.io/webapp/class" class="font-medium hover:opacity-75 transition-opacity" style="color: #8B5A2B;">Classes</a>
+                    <a href="#" class="font-medium hover:opacity-75 transition-opacity" style="color: #8B5A2B;"></a>
+                    <a href="https://t.me/MYThymM" class="font-medium hover:opacity-75 transition-opacity" style="color: #8B5A2B;">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="p-2 rounded-md" style="color: #8B5A2B;">
@@ -223,9 +232,10 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
-            <a href="#" class="block py-2 font-medium" style="color: #8B5A2B;">Classes</a>
-            <a href="#" class="block py-2 font-medium" style="color: #8B5A2B;">Assignments</a>
-            <a href="#" class="block py-2 font-medium" style="color: #8B5A2B;">Profile</a>
+            <a href="https://zeromapremium.github.io/webapp" class="block py-2 font-medium" style="color: #8B5A2B;">Home</a>
+            <a href="https://zeromapremium.github.io/webapp/class" class="block py-2 font-medium" style="color: #8B5A2B;">Classes</a>
+            <a href="#" class="block py-2 font-medium" style="color: #8B5A2B;"></a>
+            <a href="https://t.me/MYThymM" class="block py-2 font-medium" style="color: #8B5A2B;">Contact</a>
         </div>
     </nav>
 
@@ -233,7 +243,7 @@
     <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <!-- Classes Grid -->
         <div id="cards-container" class="space-y-6">
-            <h2 class="text-3xl font-bold mb-6" style="color: #8B5A2B;">All Classes</h2>
+            <h2 class="text-3xl font-bold mb-6" style="color: #8B5A2B;">HSC 27 ACS Physics Cycle 1</h2>
             <div id="cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Cards will be dynamically inserted here -->
             </div>
@@ -371,10 +381,52 @@
         </div>
     </main>
 
+    <!-- Footer -->
+    <footer class="py-8 mt-12 border-t" style="background-color: #F5F5F4; border-color: #E7E0D3;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4" style="color: #8B5A2B;">ZeroMA Premium</h3>
+                    <p class="text-sm" style="color: #8B5A2B;">Premium educational resources for competitive exams</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: #8B5A2B;">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://zeromapremium.github.io/webapp" class="text-sm hover:opacity-75" style="color: #8B5A2B;">Home</a></li>
+                        <li><a href="https://zeromapremium.github.io/webapp/class" class="text-sm hover:opacity-75" style="color: #8B5A2B;">Classes</a></li>
+                        <li><a href="#" class="text-sm hover:opacity-75" style="color: #8B5A2B;"></a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: #8B5A2B;">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:opacity-75" style="color: #8B5A2B;">Study Materials</a></li>
+                        <li><a href="#" class="text-sm hover:opacity-75" style="color: #8B5A2B;">Practice Tests</a></li>
+                        <li><a href="#" class="text-sm hover:opacity-75" style="color: #8B5A2B;">Previous Papers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: #8B5A2B;">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://t.me/MYThymM" class="text-sm hover:opacity-75" style="color: #8B5A2B;">Telegram</a></li>
+                        <li class="text-sm" style="color: #8B5A2B;">Email: contact@zeroma.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t text-center" style="border-color: #E7E0D3;">
+                <p class="text-sm" style="color: #8B5A2B;">&copy; 2023 ZeroMA Premium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- YouTube IFrame API -->
     <script src="https://www.youtube.com/iframe_api"></script>
     
     <!-- Custom JavaScript -->
-    <script src="app.js"></script>
+    
 </body>
 </html>

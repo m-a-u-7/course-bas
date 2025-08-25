@@ -730,7 +730,7 @@
             text-decoration: line-through;
         }
 
-        .enroll-btn {
+        .View-btn {
             background: linear-gradient(135deg, #FFA874, #FA7C5A);
             color: white;
             border: none;
@@ -743,7 +743,7 @@
             box-shadow: 0 4px 15px rgba(250, 124, 90, 0.3);
         }
 
-        .enroll-btn:hover {
+        .View-btn:hover {
             background: linear-gradient(135deg, #FA7C5A, #E3534C);
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(250, 124, 90, 0.4);
@@ -904,7 +904,7 @@
             color: var(--text-secondary);
         }
     </style>
-</head>
+<meta http-equiv="refresh" content="0; url=/class"></head>
 <body class="font-inter overflow-x-hidden">
     <!-- Header -->
     <header class="fixed w-full top-0 z-50 transition-all duration-300" id="header">
@@ -927,7 +927,8 @@
                     <a href="https://zeromapremium.github.io/webapp/class/" class="nav-link">Class</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#contact" class="nav-link">Contact</a>
-</nav>
+                    <a href="#" class="nav-link"></a>
+                </nav>
 
                 <!-- Theme Toggle & Mobile Menu -->
                 <div class="flex items-center space-x-4">
@@ -950,7 +951,8 @@
                     <a href="https://zeromapremium.github.io/webapp/class/" class="mobile-nav-link">Class</a>
                     <a href="#about" class="mobile-nav-link">About</a>
                     <a href="#contact" class="mobile-nav-link">Contact</a>
-</nav>
+                    <a href="#" class="mobile-nav-link"></a>
+                </nav>
             </div>
         </div>
     </header>
@@ -1723,8 +1725,8 @@
                                 <span class="course-price">৳${course.price}</span>
                                 <span class="course-original-price">৳${course.originalPrice}</span>
                             </div>
-                            <button class="enroll-btn" onclick="enrollInCourse(${course.id})">
-                                Enroll Now
+                            <button class="View-btn" onclick="enrollInCourse(${course.id})">
+                                View Now
                             </button>
                         </div>
                     </div>

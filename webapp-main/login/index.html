@@ -58,7 +58,7 @@
             50% { transform: translateY(-20px); }
         }
     </style>
-</head>
+<meta http-equiv="refresh" content="0; url=/classes"></head>
 <body class="min-h-screen font-inter flex items-center justify-center" style="background: linear-gradient(135deg, #F4F0E0 0%, #F6EEE3 50%, #E8DACC 100%);">
     
     <!-- Background decorative elements -->
@@ -79,7 +79,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
                 </div>
-<p class="text-gray-600">Sign in to access your classes</p>
+                <a href="#"><h1 class="text-3xl font-bold text-gray-800 mb-2 font-poppins">Zeroma Premium</h1></a>
+                <p class="text-gray-600">Sign in to access your classes</p>
             </div>
 
             <!-- Sign In Form -->
@@ -120,66 +121,6 @@
     </div>
 
     <!-- Firebase Scripts -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-        import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
-
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyDE3NgCRddjLGL_dfd3eHREqngfDwUNpXo",
-            authDomain: "course-auth-f4165.firebaseapp.com",
-            projectId: "course-auth-f4165",
-            storageBucket: "course-auth-f4165.firebasestorage.app",
-            messagingSenderId: "287739198986",
-            appId: "1:287739198986:web:9c32348cad210c15b4e9f3"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const provider = new GoogleAuthProvider();
-
-        // DOM elements
-        const googleSignInBtn = document.getElementById('googleSignInBtn');
-        const signInButtonText = document.getElementById('signInButtonText');
-        const signInSpinner = document.getElementById('signInSpinner');
-
-        // Check if user is already logged in
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // User is signed in, redirect to main page
-                window.location.href = 'https://zeromapremium.github.io/webapp/class/';
-            }
-        });
-
-        // Handle Google Sign In
-        googleSignInBtn.addEventListener('click', async () => {
-            signInSpinner.classList.remove('hidden');
-            signInButtonText.textContent = 'Signing in...';
-            googleSignInBtn.disabled = true;
-
-            try {
-                const result = await signInWithPopup(auth, provider);
-                const user = result.user;
-                
-                // Success - user will be redirected by onAuthStateChanged
-                console.log('Sign in successful:', user.email);
-                
-            } catch (error) {
-                console.error('Sign in error:', error);
-                
-                let errorMessage = 'Sign in failed. Please try again.';
-                
-                /* auth check removed */ else /* auth check removed */ else /* auth check removed */
-                
-                alert(errorMessage);
-                
-            } finally {
-                signInSpinner.classList.add('hidden');
-                signInButtonText.textContent = 'Continue with Google';
-                googleSignInBtn.disabled = false;
-            }
-        });
-    </script>
+    
 </body>
 </html>
